@@ -1,5 +1,7 @@
 <div class="card">
-    <div class="card-header">{{cardTitle}}</div>
-    <div class="card-body" *ngIf="cardBody">{{cardBody}}</div>
+    <img *ngIf="cardImg" [src]="cardImg.src" [alt]="cardImg.alt" class="card-img">
+    <div class="card-header">{{cardTitle | titlecase}}</div>
+    <div class="card-body">{{cardBody}}</div>
+    <hr *ngIf="cardFooter">
     <div class="card-footer" *ngIf="cardFooter">{{cardFooter}}</div>
 </div>
